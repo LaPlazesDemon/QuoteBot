@@ -1,0 +1,12 @@
+{
+    "sql": {
+        "uri": "<MySQL SERVER IP>",
+        "user": "<USERNAME>",
+        "pass": "<PASSWORD>",
+        "schema": "quotebase"
+    },
+    "discord": {
+        "token": "<DISCORD SECRET TOKEN HERE>",
+        "appID": "<APP ID HERE>"
+    }
+}
