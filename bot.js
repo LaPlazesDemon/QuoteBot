@@ -128,8 +128,6 @@ bot.on(Events.ClientReady, function() {
 
 
 // SQL LOGIN TO PROMETHEUS 
-// (Eventually add high availability and move to Athena/Minerva)
-
 var sql = mysql.createConnection({
     user: config.sql.user,
     password: config.sql.pass,
