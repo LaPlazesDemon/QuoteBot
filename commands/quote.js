@@ -64,21 +64,25 @@ module.exports = {
                     var blocked_word_found = false;
                     var newtext = quotetext;
 
-                    if (blocked_words.length) {
-                        blocked_words.forEach(word => {
-                            if (quotetext.indexOf(word) >= 0) {
-                                blocked_word_found = true;
-                                return;
-                            }
-                        });
+                    if (blocked_words) {
+                        if (blocked_words.length) {
+                            blocked_words.forEach(word => {
+                                if (quotetext.indexOf(word) >= 0) {
+                                    blocked_word_found = true;
+                                    return;
+                                }
+                            });
+                        }
                     }
-
-                    if (censored_words.length) {
-                        censored_words.forEach(word => {
-                            newtext = newtext.replaceAll(word, replaceAllButFirst(word));
-                        });
+                    
+                    if (censored_words) {
+                        if (censored_words.length) {
+                            censored_words.forEach(word => {
+                                newtext = newtext.replaceAll(word, replaceAllButFirst(word));
+                            });
+                        }    
                     }
-
+                    
                     if (blocked_word_found) {
                          interaction.reply({content: ":no_entry: Your quote contains a blocked word "})
                     } else {
