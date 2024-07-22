@@ -1,5 +1,5 @@
 const {Client, GatewayIntentBits, Events, Partials, ActivityType, Collection, REST} = require('discord.js');
-var mysql = require("mysql")
+var mysql = require("mysql2")
 var path = require("path")
 var fs = require("fs")
 var config = require("./config.json")
